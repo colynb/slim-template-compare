@@ -1,4 +1,10 @@
-## Slim PHP Framework Using Twig vs Mustache
+## Slim PHP Framework Example
+
+This demonstrates how to use the Slim micro-framework. The demo will evolve as I add more and more features. So far, features include:
+
+ * Using Twig for templating
+ * Using Mustache for templating
+ * Connecting to Redis (using the Predis PHP library) to store key/value stores in memory.
 
 ### Install
 
@@ -14,18 +20,6 @@ php -S localhost:8000
 
 ## Example routes
 
-
-Homepage with Twig (using layout)
-
-[http://localhost:8000/](http://localhost:8000/)
-
-Page with Twig (using layout) and passing vars to template
-
-[http://localhost:8000/user/colyn](http://localhost:8000/user/colyn)
-
-Page with Mustache (no layout - Mustache doesn't have layouts) and passing vars to template
-
-[http://localhost:8000/user2/colyn](http://localhost:8000/user2/colyn)
 
 ## Install Composer (globally)
 
