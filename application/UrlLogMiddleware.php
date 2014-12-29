@@ -1,5 +1,7 @@
 <?php
 
+namespace Application;
+
 class UrlLogMiddleware extends \Slim\Middleware {
 	public function call() {
 		$app = $this->app;

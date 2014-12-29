@@ -1,17 +1,15 @@
 <?php
 require 'vendor/autoload.php';
-require 'UrlLogMiddleware.php';
-require 'RedisSessionHandler.php';
 
 // Example Implementation Twig Template Engine
 $loader = new Twig_Loader_Filesystem('./templates/');
 $twig = new Twig_Environment($loader);
 
-session_set_save_handler(new RedisSessionHandler(new Predis\Client()));
+session_set_save_handler(new \Application\RedisSessionHandler(new Predis\Client()));
 session_start();
 
 $app = new \Slim\Slim();
-$app->add(new UrlLogMiddleware());
+$app->add(new \Application\UrlLogMiddleware());
 
 // Homepage
 $app->get('/', function () use ($twig) {
